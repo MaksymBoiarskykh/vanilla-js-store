@@ -1,7 +1,7 @@
 vanilla-js-store - https://vanilla-js-store-maksymboiarskykh.netlify.app
 
 
-This is part of the functionality of the online store, which allows you to open products by category, view information about them, buy them and fill out a form that checks the correctness of the entered data.
+This is an online store that is adaptive for different devices. It allows you to open products by category, view information about them, buy them and fill out a form that checks the correctness of the entered data.
 
 
 In this project I used such technologies:
