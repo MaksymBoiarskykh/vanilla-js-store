@@ -1,0 +1,22 @@
+.container_massage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
+}
+
+.massage {
+  font-size: 30px;
+
+  &__item {
+    color: rgb(120, 30, 30);
+  }
+
+  &__btn {
+    margin-top: 20px;
+    width: 40%;
+    min-width: px;
+  }
+}

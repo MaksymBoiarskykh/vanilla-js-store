@@ -1,0 +1,25 @@
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+  }
+
+  &__info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      flex-grow: 1;
+    }
+  }
+}
