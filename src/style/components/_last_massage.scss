@@ -8,7 +8,11 @@
 }
 
 .massage {
-  font-size: 30px;
+  font-size: 20px;
+
+  @media (min-width: 576px) {
+    font-size: 30px;
+  }
 
   &__item {
     color: rgb(120, 30, 30);
@@ -16,7 +20,11 @@
 
   &__btn {
     margin-top: 20px;
-    width: 40%;
+    width: 60%;
     min-width: px;
+
+    @media (min-width: 576px) {
+      width: 40%;
+    }
   }
 }

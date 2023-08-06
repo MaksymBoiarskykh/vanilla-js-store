@@ -2,7 +2,7 @@ import { createInfoContent } from "./createInfoContent.js";
 
 const createInfo = () => {
   const mainBlock = document.querySelector("main");
-  const blockInfo = document.createElement("div");
+  const blockInfoContainer = document.createElement("div");
 
   return (list, productName) => {
     let num = null;
@@ -12,11 +12,11 @@ const createInfo = () => {
       }
     });
 
-    blockInfo.innerHTML = "";
-    blockInfo.classList.add("info_block");
-    mainBlock.append(blockInfo);
+    blockInfoContainer.innerHTML = "";
+    blockInfoContainer.classList.add("container__modal");
+    mainBlock.append(blockInfoContainer);
 
-    return createInfoContent(list, num, blockInfo);
+    return createInfoContent(list, num, blockInfoContainer);
   };
 };
 

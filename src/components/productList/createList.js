@@ -8,9 +8,11 @@ const createList = (data) => {
   const listProduct = document.createElement("ul");
   listProduct.classList.add("product-block__list");
 
+  // creating a product
   listProduct.innerHTML = createListItem(data);
   const createInfoBlock = createInfo();
 
+  // event for creating information about product
   listProduct.addEventListener("click", () => {
     if (event.target.classList.contains("btn")) {
       const productName = event.target.previousElementSibling;

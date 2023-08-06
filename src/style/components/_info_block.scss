@@ -1,6 +1,7 @@
 .info_block {
   position: fixed;
-  z-index: 10000;
+  padding: 10px;
+  z-index: 1011;
   background: #fff;
   left: 0;
   top: 0;
@@ -12,43 +13,33 @@
   align-items: center;
 
   @media (min-width: 768px) {
-    left: 40%;
-    box-shadow: -200px 35px 300px 200px rgba(0, 0, 0, 0.16);
+    left: 50%;
   }
 
-  &__content {
-    width: 90%;
-    height: 80vh;
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35vh;
+    margin-bottom: 30px;
+  }
 
-    &__picture {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 35vh;
-      margin-bottom: 30px;
-
-      img {
-        max-width: 60%;
-      }
+  &__title {
+    font-size: 15px;
+    @media (min-width: 576px) {
+      font-size: 20px;
     }
+  }
 
-    &__title {
-      font-size: 15px;
-      @media (min-width: 576px) {
-        font-size: 20px;
-      }
-    }
+  &__price {
+    font-size: 30px;
+    color: green;
+    margin: 5px 0;
+  }
 
-    &__price {
-      font-size: 30px;
-      color: green;
-      margin: 5px 0;
-    }
-
-    &__description {
-      overflow: scroll;
-      max-height: 9vh;
-    }
+  &__description {
+    overflow: scroll;
+    max-height: 9vh;
   }
 
   .btn {

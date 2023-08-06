@@ -2,11 +2,12 @@ import { getResultForm } from "./getResultForm.js";
 import { createCloseButton } from "../createCloseButton.js";
 
 function createForm(product, contentBlock) {
-  const formBlock = document.createElement("form");
+  const formBlock = document.createElement("div");
+  formBlock.classList.add("container__modal");
 
-  formBlock.classList.add("form-block");
-  formBlock.innerHTML = `
-     <form action="">
+  const form = document.createElement("form");
+  form.classList.add("form-block");
+  form.innerHTML = `
         <div class="form-block__bit">
             <label for="full-name">Full name:</label>
             <input type="text" id="full-name" name="full-name">
@@ -26,14 +27,15 @@ function createForm(product, contentBlock) {
         <div class="form-block__bit">
             <input class="btn" type="submit" value="send">
         </div>
-    </form>
     `;
 
-  createCloseButton(formBlock, formBlock);
   document.querySelector("main").append(formBlock);
+  formBlock.append(form);
 
-  formBlock.addEventListener("submit", () => {
-    getResultForm(formBlock, product);
+  createCloseButton(form, formBlock);
+
+  form.addEventListener("submit", () => {
+    getResultForm(form, product);
     contentBlock.remove();
     formBlock.remove();
   });
